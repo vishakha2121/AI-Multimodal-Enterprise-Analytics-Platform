@@ -40,3 +40,36 @@ uvicorn main:app --reload --port 8000
 # Frontend
 cd frontend
 npm run dev
+
+# Navigate to backend
+cd backend
+
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# For Windows:
+venv\Scripts\activate
+# For Mac/Linux:
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Copy environment variables
+cp .env.example .env
+
+# Run the server
+uvicorn main:app --reload --port 8000
+
+# Navigate to frontend
+cd frontend
+
+# Install dependencies
+npm install
+
+# Copy environment variables
+cp .env.example .env
+
+# Run the development server
+npm run dev
